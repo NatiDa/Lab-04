@@ -1,16 +1,6 @@
 let info ={
     
-    maxWithdraw : 100000.00,
-    minWithdraw: 100.00,
-    initialBalance : 0.0,
-    
-    
-    account:function(){
 
-        firstDeposit=parseFloat(prompt("Deposit your initial deposit"))
-        this.initialBalance=this.initialBalance+firstDeposit
-        
-    },
    
 
     deposit:function(){
