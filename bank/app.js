@@ -1,13 +1,19 @@
 let info ={
     
+    maxWithdraw : 100000.00,
+    minWithdraw: 100.00,
+    initialBalance : 0.0,
+    
+    
+    account:function(){
 
+        firstDeposit=parseFloat(prompt("Deposit your initial deposit"))
+        this.initialBalance=this.initialBalance+firstDeposit
+        
+    },
    
 
-    deposit:function(){
-        amount=parseFloat(prompt("How much money you wish to deposit"))
-        this.initialBalance = this.initialBalance + amount;
-         console.log(amount+" birr has been deposited into your account")
-    },
+  
     withdraw:function(){
             amount=parseFloat(prompt("How much money you wish to withdraw"))
             if (this.minWithdraw > amount) 
