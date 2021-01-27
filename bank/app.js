@@ -13,23 +13,27 @@ let info ={
     },
    
 
-  
+    deposit:function(){
+        amount=parseFloat(prompt("How much money you wish to deposit"))
+        this.initialBalance = this.initialBalance + amount;
+         console.log(amount+" birr has been deposited into your account")
+    },
     withdraw:function(){
-            amount=parseFloat(prompt("How much money you wish to withdraw"))
-            if (this.minWithdraw > amount) 
-            { console.log("Minimum ammount to withdraw is 100.00 birr") }
-            if(amount>this.maxWithdraw){console.log("Maximum amount to withdraw is 100,000.00 birr")}
-            else{
-            if (amount > this.initialBalance) console.log("Insufficent funds")
-            else{          
-            this.balance = this.initialBalance - amount;
-            console.log("You've withdrawn "+amount +" birr")
-            }}
-        },
-    balance:function(){
-            console.log(( "Your current balance is:" + this.initialBalance))
-            return this.initialBalance
-        },
+        amount=parseFloat(prompt("How much money you wish to withdraw"))
+        if (this.minWithdraw > amount) 
+        { console.log("Minimum ammount to withdraw is 100.00 birr") }
+        if(amount>this.maxWithdraw){console.log("Maximum amount to withdraw is 100,000.00 birr")}
+        else{
+        if (amount > this.initialBalance) console.log("Insufficent funds")
+        else{          
+        this.balance = this.initialBalance - amount;
+        console.log("You've withdrawn "+amount +" birr")
+        }}
+    },
+balance:function(){
+        console.log(( "Your current balance is:" + this.initialBalance))
+        return this.initialBalance
+    },
     transfer:function(){     
             amount = parseFloat(prompt("Enter the amount you want to transfer"));
             reciever = parseInt(prompt("Enter the account number of the person you want to send to"));
